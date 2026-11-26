@@ -1,0 +1,810 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>XYZ Institute | Learn & Grow</title>
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.9/dist/css/bootstrap.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.9/dist/js/bootstrap.bundle.min.js"></script>
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+
+</head>
+<style>
+
+/* GENERAL */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    color: #263449;
+    background-color: #ffffff;
+}
+
+
+/* NAVBAR */
+
+.custom-navbar {
+    background-color: #142b49;
+    padding: 16px 0;
+}
+
+.navbar-brand {
+    color: white !important;
+    font-size: 27px;
+    font-weight: bold;
+}
+
+.navbar-brand span {
+    color: #55c2e8;
+}
+
+.navbar-nav {
+    gap: 25px;
+}
+
+.nav-link {
+    color: white !important;
+    font-size: 17px;
+    transition: 0.3s;
+}
+
+.nav-link:hover {
+    color: #55c2e8 !important;
+}
+
+
+/* CAROUSEL */
+
+.carousel-item {
+    height: 550px;
+    position: relative;
+}
+
+.carousel-item img {
+    width: 100%;
+    height: 550px;
+    object-fit: cover;
+    filter: brightness(45%);
+}
+
+.carousel-caption {
+    bottom: 25%;
+}
+
+.carousel-caption h1 {
+    font-size: 45px;
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+
+.carousel-caption p {
+    font-size: 19px;
+    margin-bottom: 30px;
+}
+
+.hero-btn {
+    display: inline-block;
+    background-color: #55c2e8;
+    color: #142b49;
+    text-decoration: none;
+    padding: 12px 28px;
+    border-radius: 6px;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+.hero-btn:hover {
+    background-color: white;
+    color: #142b49;
+}
+
+.section-title {
+    color: #142b49;
+    font-size: 34px;
+    font-weight: bold;
+    margin-bottom: 18px;
+}
+
+.section-description {
+    color: #667085;
+    font-size: 16px;
+    line-height: 1.7;
+}
+
+
+
+/* HOW IT WORKS */
+
+.how-section {
+    padding: 80px 0;
+    background-color: white;
+}
+
+.step-card {
+    height: 100%;
+    text-align: center;
+    background-color: #f2f8fc;
+    padding: 35px 20px;
+    border-radius: 12px;
+    transition: 0.3s;
+}
+
+.step-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 8px 20px rgba(20, 43, 73, 0.12);
+}
+
+.step-icon {
+    width: 75px;
+    height: 75px;
+    background-color: #142b49;
+    color: #55c2e8;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0 auto 22px;
+    font-size: 30px;
+}
+
+.step-card h3 {
+    color: #142b49;
+    font-size: 20px;
+    font-weight: bold;
+    margin-bottom: 15px;
+}
+
+.step-card p {
+    color: #667085;
+    line-height: 1.7;
+}
+
+
+/* CONTACT SECTION */
+
+.contact-section {
+    padding: 80px 0;
+    background-color: #f2f8fc;
+}
+
+.contact-heading {
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+.contact-box {
+    display: flex;
+    flex-wrap: wrap;
+    background-color: white;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.08);
+}
+
+.contact-info {
+    flex: 1;
+    min-width: 280px;
+    padding: 40px;
+    background-color: #142b49;
+    color: white;
+}
+
+.contact-info h3 {
+    font-size: 27px;
+    margin-bottom: 22px;
+}
+
+.contact-info p {
+    margin-bottom: 22px;
+    line-height: 1.8;
+}
+
+.contact-info i {
+    color: #55c2e8;
+    margin-right: 10px;
+}
+
+.contact-form {
+    flex: 2;
+    min-width: 280px;
+    padding: 40px;
+}
+
+.contact-form label {
+    display: block;
+    color: #142b49;
+    font-weight: bold;
+    margin-bottom: 8px;
+}
+
+.contact-form .form-control {
+    padding: 12px;
+    border: 1px solid #d5e0eb;
+    border-radius: 6px;
+}
+
+.contact-form .form-control:focus {
+    border-color: #55c2e8;
+    box-shadow: 0 0 5px rgba(85, 194, 232, 0.3);
+}
+
+.submit-btn {
+    background-color: #142b49;
+    color: white;
+    border: none;
+    padding: 12px 25px;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.submit-btn:hover {
+    background-color: #55c2e8;
+    color: #142b49;
+}
+
+
+/* FOOTER */
+
+.footer {
+    background-color: #142b49;
+    color: white;
+    padding: 50px 0 20px;
+}
+
+.footer h3 {
+    color: #55c2e8;
+    font-size: 26px;
+    margin-bottom: 20px;
+}
+
+.footer h5 {
+    font-size: 19px;
+    margin-bottom: 20px;
+}
+
+.footer p {
+    color: #d4dfeb;
+    line-height: 1.8;
+}
+
+.footer ul {
+    list-style: none;
+    padding: 0;
+}
+
+.footer ul li {
+    margin-bottom: 12px;
+}
+
+.footer ul li a {
+    color: #d4dfeb;
+    text-decoration: none;
+    transition: 0.3s;
+}
+
+.footer ul li a:hover {
+    color: #55c2e8;
+}
+
+.social-links {
+    display: flex;
+    gap: 18px;
+}
+
+.social-links a {
+    color: white;
+    font-size: 23px;
+    transition: 0.3s;
+}
+
+.social-links a:hover {
+    color: #55c2e8;
+}
+
+.footer hr {
+    border-color: #8090a3;
+    margin-top: 30px;
+}
+
+.copyright {
+    text-align: center;
+    margin: 0;
+    font-size: 14px;
+}
+
+
+@media (max-width: 768px) {
+
+    .navbar-nav {
+        gap: 5px;
+        padding-top: 15px;
+    }
+
+    .carousel-item,
+    .carousel-item img {
+        height: 400px;
+    }
+
+    .carousel-caption {
+        bottom: 18%;
+    }
+
+    .carousel-caption h1 {
+        font-size: 28px;
+    }
+
+    .carousel-caption p {
+        font-size: 15px;
+    }
+
+    .section-title {
+        font-size: 28px;
+    }
+
+    .about-section,
+    .how-section,
+    .contact-section {
+        padding: 55px 0;
+    }
+
+    .contact-info,
+    .contact-form {
+        padding: 25px;
+    }
+
+}
+
+</style>
+
+<body>
+
+    <!-- NAVBAR -->
+    <nav class="navbar navbar-expand-lg custom-navbar sticky-top">
+        <div class="container">
+
+            <a class="navbar-brand" href="#home">
+                XYZ <span>Institute</span>
+            </a>
+
+            <button class="navbar-toggler" type="button"
+                data-bs-toggle="collapse"
+                data-bs-target="#navbarMenu"
+                aria-controls="navbarMenu"
+                aria-expanded="false"
+                aria-label="Toggle navigation">
+
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div class="collapse navbar-collapse" id="navbarMenu">
+
+                <ul class="navbar-nav ms-auto">
+
+                    <li class="nav-item">
+                        <a class="nav-link" href="index.html">Home</a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a class="nav-link" href="aboutus.html">About Us</a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a class="nav-link" href="courses.html">Courses</a>
+                    </li>
+
+                </ul>
+
+            </div>
+        </div>
+    </nav>
+
+
+    <section id="home">
+
+        <div id="carouselExampleAutoplaying"
+            class="carousel slide"
+            data-bs-ride="carousel"
+            data-bs-interval="3000">
+
+            <div class="carousel-indicators">
+
+                <button type="button"
+                    data-bs-target="#carouselExampleAutoplaying"
+                    data-bs-slide-to="0"
+                    class="active"
+                    aria-current="true"
+                    aria-label="Slide 1"></button>
+
+                <button type="button"
+                    data-bs-target="#carouselExampleAutoplaying"
+                    data-bs-slide-to="1"
+                    aria-label="Slide 2"></button>
+
+                <button type="button"
+                    data-bs-target="#carouselExampleAutoplaying"
+                    data-bs-slide-to="2"
+                    aria-label="Slide 3"></button>
+
+            </div>
+
+            <div class="carousel-inner">
+
+                <div class="carousel-item active">
+
+                    <img src="4.jpg"
+                        class="d-block w-100"
+                        alt="Students learning">
+
+                    <div class="carousel-caption">
+                        <h1>Welcome to XYZ Institute</h1>
+                        <p>Learn new skills and build a successful future.</p>
+                        <a href="#courses" class="hero-btn">Explore Courses</a>
+                    </div>
+
+                </div>
+
+                <div class="carousel-item">
+
+                    <img src="5.jpg"
+                        class="d-block w-100"
+                        alt="Students working together">
+
+                    <div class="carousel-caption">
+                        <h1>Learn From Experts</h1>
+                        <p>Get practical knowledge and industry-ready skills.</p>
+                        <a href="#courses" class="hero-btn">Start Learning</a>
+                    </div>
+
+                </div>
+
+                <div class="carousel-item">
+
+                    <img src="6.jpg"
+                        class="d-block w-100"
+                        alt="Online learning">
+
+                    <div class="carousel-caption">
+                        <h1>Shape Your Future</h1>
+                        <p>Discover opportunities and turn your goals into reality.</p>
+                        <a href="#contact" class="hero-btn">Contact Us</a>
+                    </div>
+
+                </div>
+
+            </div>
+
+            <button class="carousel-control-prev"
+                type="button"
+                data-bs-target="#carouselExampleAutoplaying"
+                data-bs-slide="prev">
+
+                <span class="carousel-control-prev-icon"
+                    aria-hidden="true"></span>
+
+                <span class="visually-hidden">Previous</span>
+
+            </button>
+
+            <button class="carousel-control-next"
+                type="button"
+                data-bs-target="#carouselExampleAutoplaying"
+                data-bs-slide="next">
+
+                <span class="carousel-control-next-icon"
+                    aria-hidden="true"></span>
+
+                <span class="visually-hidden">Next</span>
+
+            </button>
+
+        </div>
+
+    </section>
+
+
+   
+
+    <!-- HOW IT WORKS -->
+    <section class="how-section" id="courses">
+
+        <div class="container">
+
+            <div class="text-center mb-5">
+
+                <h2 class="section-title">How It Works</h2>
+
+                <p class="section-description">
+                    Start your learning journey with XYZ Institute
+                    in just four simple steps.
+                </p>
+
+            </div>
+
+            <div class="row g-4">
+
+                <div class="col-md-3">
+
+                    <div class="step-card">
+
+                        <div class="step-icon">
+                            <i class="fa-solid fa-user-plus"></i>
+                        </div>
+
+                        <h3>01. Register</h3>
+
+                        <p>
+                            Create your account and join our learning community.
+                        </p>
+
+                    </div>
+
+                </div>
+
+                <div class="col-md-3">
+
+                    <div class="step-card">
+
+                        <div class="step-icon">
+                            <i class="fa-solid fa-book-open"></i>
+                        </div>
+
+                        <h3>02. Choose Course</h3>
+
+                        <p>
+                            Explore available courses and select your
+                            area of interest.
+                        </p>
+
+                    </div>
+
+                </div>
+
+                <div class="col-md-3">
+
+                    <div class="step-card">
+
+                        <div class="step-icon">
+                            <i class="fa-solid fa-laptop"></i>
+                        </div>
+
+                        <h3>03. Start Learning</h3>
+
+                        <p>
+                            Learn through lessons, practical sessions
+                            and guided training.
+                        </p>
+
+                    </div>
+
+                </div>
+
+                <div class="col-md-3">
+
+                    <div class="step-card">
+
+                        <div class="step-icon">
+                            <i class="fa-solid fa-graduation-cap"></i>
+                        </div>
+
+                        <h3>04. Grow Your Skills</h3>
+
+                        <p>
+                            Improve your knowledge and prepare for
+                            new career opportunities.
+                        </p>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- CONTACT US -->
+    <section class="contact-section" id="contact">
+
+        <div class="container">
+
+            <div class="contact-heading">
+
+                <h2 class="section-title">Contact Us</h2>
+
+                <p class="section-description">
+                    Have questions about our courses?
+                    Get in touch with our team.
+                </p>
+
+            </div>
+
+            <div class="contact-box">
+
+                <div class="contact-info">
+
+                    <h3>Let's Connect</h3>
+
+                    <p>
+                        We are happy to help you choose the right course
+                        and begin your learning journey.
+                    </p>
+
+                    <p>
+                        <i class="fa-solid fa-envelope"></i>
+                        xyzinstitute@gmail.com
+                    </p>
+
+                    <p>
+                        <i class="fa-solid fa-phone"></i>
+                        +91 98765 43210
+                    </p>
+
+                    <p>
+                        <i class="fa-solid fa-location-dot"></i>
+                        India
+                    </p>
+
+                </div>
+
+                <form class="contact-form">
+
+                    <div class="row">
+
+                        <div class="col-md-6 mb-3">
+
+                            <label for="name">Your Name</label>
+
+                            <input type="text" id="name"
+                                class="form-control"
+                                placeholder="Enter your name"
+                                required>
+
+                        </div>
+
+                        <div class="col-md-6 mb-3">
+
+                            <label for="email">Email Address</label>
+
+                            <input type="email" id="email"
+                                class="form-control"
+                                placeholder="Enter your email"
+                                required>
+
+                        </div>
+
+                    </div>
+
+                    <div class="mb-3">
+
+                        <label for="phone">Phone Number</label>
+
+                        <input type="tel" id="phone"
+                            class="form-control"
+                            placeholder="Enter your phone number">
+
+                    </div>
+
+                    <div class="mb-3">
+
+                        <label for="subject">Course Interested In</label>
+
+                        <input type="text" id="subject"
+                            class="form-control"
+                            placeholder="Enter course name">
+
+                    </div>
+
+                    <div class="mb-3">
+
+                        <label for="message">Your Message</label>
+
+                        <textarea id="message"
+                            class="form-control"
+                            rows="4"
+                            placeholder="Write your message..."
+                            required></textarea>
+
+                    </div>
+
+                    <button type="submit" class="submit-btn">
+                        Send Message
+                        <i class="fa-solid fa-paper-plane"></i>
+                    </button>
+
+                </form>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- FOOTER -->
+    <footer class="footer">
+
+        <div class="container">
+
+            <div class="row g-4">
+
+                <div class="col-md-6">
+
+                    <h3>XYZ Institute</h3>
+
+                    <p>
+                        Learn today, lead tomorrow. Build your knowledge,
+                        develop your skills and create a brighter future
+                        with XYZ Institute.
+                    </p>
+
+                </div>
+
+                <div class="col-md-3">
+
+                    <h5>Quick Links</h5>
+
+                    <ul>
+                        <li><a href="#home">Home</a></li>
+                        <li><a href="#about">About Us</a></li>
+                        <li><a href="#courses">Courses</a></li>
+                    </ul>
+
+                </div>
+
+                <div class="col-md-3">
+
+                    <h5>Follow Us</h5>
+
+                    <div class="social-links">
+
+                        <a href="#" aria-label="Facebook">
+                            <i class="fa-brands fa-facebook"></i>
+                        </a>
+
+                        <a href="#" aria-label="Instagram">
+                            <i class="fa-brands fa-instagram"></i>
+                        </a>
+
+                        <a href="#" aria-label="LinkedIn">
+                            <i class="fa-brands fa-linkedin"></i>
+                        </a>
+
+                        <a href="#" aria-label="YouTube">
+                            <i class="fa-brands fa-youtube"></i>
+                        </a>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+            <hr>
+
+            <p class="copyright">
+                © 2026 XYZ Institute. All Rights Reserved.
+            </p>
+
+        </div>
+
+    </footer>
+
+
+</body>
+</html>

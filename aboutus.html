@@ -1,0 +1,383 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>XYZ Institute | Learn & Grow</title>
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.9/dist/css/bootstrap.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.9/dist/js/bootstrap.bundle.min.js"></script>
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+
+</head>
+<style>
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    color: #263449;
+    background-color: #ffffff;
+}
+
+
+.custom-navbar {
+    background-color: #142b49;
+    padding: 16px 0;
+}
+
+.navbar-brand {
+    color: white !important;
+    font-size: 27px;
+    font-weight: bold;
+}
+
+.navbar-brand span {
+    color: #55c2e8;
+}
+
+.navbar-nav {
+    gap: 25px;
+}
+
+.nav-link {
+    color: white !important;
+    font-size: 17px;
+    transition: 0.3s;
+}
+
+.nav-link:hover {
+    color: #55c2e8 !important;
+}
+
+
+
+
+/* ABOUT SECTION */
+
+.about-section {
+    padding: 80px 0;
+    background-color: #f2f8fc;
+}
+
+.about-image {
+    width: 100%;
+    height: 350px;
+    object-fit: cover;
+    border-radius: 12px;
+}
+
+.about-section p {
+    color: #596579;
+    line-height: 1.8;
+    margin-bottom: 18px;
+}
+
+.primary-btn {
+    display: inline-block;
+    background-color: #142b49;
+    color: white;
+    text-decoration: none;
+    padding: 12px 25px;
+    border-radius: 6px;
+    transition: 0.3s;
+}
+
+.primary-btn:hover {
+    background-color: #55c2e8;
+    color: #142b49;
+}
+
+
+
+/* FOOTER */
+
+.footer {
+    background-color: #142b49;
+    color: white;
+    padding: 50px 0 20px;
+}
+
+.footer h3 {
+    color: #55c2e8;
+    font-size: 26px;
+    margin-bottom: 20px;
+}
+
+.footer h5 {
+    font-size: 19px;
+    margin-bottom: 20px;
+}
+
+.footer p {
+    color: #d4dfeb;
+    line-height: 1.8;
+}
+
+.footer ul {
+    list-style: none;
+    padding: 0;
+}
+
+.footer ul li {
+    margin-bottom: 12px;
+}
+
+.footer ul li a {
+    color: #d4dfeb;
+    text-decoration: none;
+    transition: 0.3s;
+}
+
+.footer ul li a:hover {
+    color: #55c2e8;
+}
+
+.social-links {
+    display: flex;
+    gap: 18px;
+}
+
+.social-links a {
+    color: white;
+    font-size: 23px;
+    transition: 0.3s;
+}
+
+.social-links a:hover {
+    color: #55c2e8;
+}
+
+.footer hr {
+    border-color: #8090a3;
+    margin-top: 30px;
+}
+
+.copyright {
+    text-align: center;
+    margin: 0;
+    font-size: 14px;
+}
+
+
+/* RESPONSIVE DESIGN */
+
+@media (max-width: 768px) {
+
+    .navbar-nav {
+        gap: 5px;
+        padding-top: 15px;
+    }
+
+    .carousel-item,
+    .carousel-item img {
+        height: 400px;
+    }
+
+    .carousel-caption {
+        bottom: 18%;
+    }
+
+    .carousel-caption h1 {
+        font-size: 28px;
+    }
+
+    .carousel-caption p {
+        font-size: 15px;
+    }
+
+    .section-title {
+        font-size: 28px;
+    }
+
+    .about-section,
+    .how-section,
+    .contact-section {
+        padding: 55px 0;
+    }
+
+    .contact-info,
+    .contact-form {
+        padding: 25px;
+    }
+
+}
+
+</style>
+
+<body>
+
+    <nav class="navbar navbar-expand-lg custom-navbar sticky-top">
+        <div class="container">
+
+            <a class="navbar-brand" href="#home">
+                XYZ <span>Institute</span>
+            </a>
+
+            <button class="navbar-toggler" type="button"
+                data-bs-toggle="collapse"
+                data-bs-target="#navbarMenu"
+                aria-controls="navbarMenu"
+                aria-expanded="false"
+                aria-label="Toggle navigation">
+
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div class="collapse navbar-collapse" id="navbarMenu">
+
+                <ul class="navbar-nav ms-auto">
+
+                    <li class="nav-item">
+                        <a class="nav-link" href="index.html">Home</a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a class="nav-link" href="aboutus.html">About Us</a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a class="nav-link" href="courses.html">Courses</a>
+                    </li>
+
+                </ul>
+
+            </div>
+        </div>
+    </nav>
+
+    <section class="about-section" id="about">
+
+        <div class="container">
+            <h2 class="section-title text-center"><b>About XYZ Institute</b></h2>
+
+            <div class="row align-items-center g-4">
+
+                <div class="col-md-6">
+
+                    <img src="1.jpg"
+                        class="about-image"
+                        alt="Students at an institute">
+
+                </div>
+
+                <div class="col-md-6">
+
+
+                    <p>
+                        XYZ Institute was established with a vision to
+                        provide quality education and practical learning
+                        opportunities for students. The idea behind
+                        starting our institute was to create a learning
+                        environment where every student could discover
+                        their potential and develop the skills needed
+                        for a successful career.
+                    </p>
+                    <p>
+                        We started our journey with a simple goal of
+                    making education more accessible, interesting
+                    and career-oriented. With dedication, teamwork
+                    and continuous improvement, we aim to support
+                    students in achieving their dreams.
+                    </p>
+
+                
+                    <a href="courses.html" class="primary-btn">
+                        Discover Courses
+                    </a>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    
+    
+
+
+    <!-- FOOTER -->
+    <footer class="footer">
+
+        <div class="container">
+
+            <div class="row g-4">
+
+                <div class="col-md-6">
+
+                    <h3>XYZ Institute</h3>
+
+                    <p>
+                        Learn today, lead tomorrow. Build your knowledge,
+                        develop your skills and create a brighter future
+                        with XYZ Institute.
+                    </p>
+
+                </div>
+
+                <div class="col-md-3">
+
+                    <h5>Quick Links</h5>
+
+                    <ul>
+                        <li><a href="#home">Home</a></li>
+                        <li><a href="#about">About Us</a></li>
+                        <li><a href="#courses">Courses</a></li>
+                    </ul>
+
+                </div>
+
+                <div class="col-md-3">
+
+                    <h5>Follow Us</h5>
+
+                    <div class="social-links">
+
+                        <a href="#" aria-label="Facebook">
+                            <i class="fa-brands fa-facebook"></i>
+                        </a>
+
+                        <a href="#" aria-label="Instagram">
+                            <i class="fa-brands fa-instagram"></i>
+                        </a>
+
+                        <a href="#" aria-label="LinkedIn">
+                            <i class="fa-brands fa-linkedin"></i>
+                        </a>
+
+                        <a href="#" aria-label="YouTube">
+                            <i class="fa-brands fa-youtube"></i>
+                        </a>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+            <hr>
+
+            <p class="copyright">
+                © 2026 XYZ Institute. All Rights Reserved.
+            </p>
+
+        </div>
+
+    </footer>
+
+</body>
+</html>
+

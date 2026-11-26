@@ -1,0 +1,523 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>XYZ Institute | Learn & Grow</title>
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.9/dist/css/bootstrap.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.9/dist/js/bootstrap.bundle.min.js"></script>
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+
+</head>
+<style>
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    color: #263449;
+    background-color: #ffffff;
+}
+
+
+.custom-navbar {
+    background-color: #142b49;
+    padding: 16px 0;
+}
+
+.navbar-brand {
+    color: white !important;
+    font-size: 27px;
+    font-weight: bold;
+}
+
+.navbar-brand span {
+    color: #55c2e8;
+}
+
+.navbar-nav {
+    gap: 25px;
+}
+
+.nav-link {
+    color: white !important;
+    font-size: 17px;
+    transition: 0.3s;
+}
+
+.nav-link:hover {
+    color: #55c2e8 !important;
+}
+
+/* COURSES SECTION */
+
+.courses-section {
+    padding: 80px 0;
+    background-color: #f2f8fc;
+}
+
+.section-title {
+    color: #142b49;
+    font-size: 36px;
+    font-weight: bold;
+    margin-bottom: 18px;
+}
+
+.section-description {
+    color: #667085;
+    font-size: 16px;
+    line-height: 1.8;
+}
+
+
+/* COURSE CARD */
+
+.course-card {
+    height: 100%;
+    background-color: white;
+    padding: 30px 20px;
+    text-align: center;
+    border-radius: 12px;
+    border: 1px solid #e2eaf2;
+    transition: 0.3s;
+}
+
+.course-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 8px 22px rgba(20,43,73,0.15);
+}
+
+
+/* COURSE ICON */
+
+.course-icon {
+    width: 75px;
+    height: 75px;
+    background-color: #142b49;
+    color: #55c2e8;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0 auto 22px;
+    font-size: 32px;
+}
+
+.course-card h4 {
+    color: #142b49;
+    font-size: 20px;
+    font-weight: bold;
+    margin-bottom: 15px;
+}
+
+.course-card p {
+    color: #667085;
+    font-size: 15px;
+    line-height: 1.7;
+    min-height: 76px;
+}
+
+
+/* COURSE BUTTON */
+
+.course-btn {
+    display: inline-block;
+    background-color: #142b49;
+    color: white;
+    text-decoration: none;
+    padding: 10px 22px;
+    border-radius: 6px;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+.course-btn:hover {
+    background-color: #55c2e8;
+    color: #142b49;
+}
+
+
+
+
+
+
+
+/* FOOTER */
+
+.footer {
+    background-color: #142b49;
+    color: white;
+    padding: 50px 0 20px;
+}
+
+.footer h3 {
+    color: #55c2e8;
+    font-size: 26px;
+    margin-bottom: 20px;
+}
+
+.footer h5 {
+    font-size: 19px;
+    margin-bottom: 20px;
+}
+
+.footer p {
+    color: #d4dfeb;
+    line-height: 1.8;
+}
+
+.footer ul {
+    list-style: none;
+    padding: 0;
+}
+
+.footer ul li {
+    margin-bottom: 12px;
+}
+
+.footer ul li a {
+    color: #d4dfeb;
+    text-decoration: none;
+    transition: 0.3s;
+}
+
+.footer ul li a:hover {
+    color: #55c2e8;
+}
+
+.social-links {
+    display: flex;
+    gap: 18px;
+}
+
+.social-links a {
+    color: white;
+    font-size: 23px;
+    transition: 0.3s;
+}
+
+.social-links a:hover {
+    color: #55c2e8;
+}
+
+.footer hr {
+    border-color: #8090a3;
+    margin-top: 30px;
+}
+
+.copyright {
+    text-align: center;
+    margin: 0;
+    font-size: 14px;
+}
+
+
+/* RESPONSIVE DESIGN */
+
+@media (max-width: 768px) {
+
+    .navbar-nav {
+        gap: 5px;
+        padding-top: 15px;
+    }
+
+    .carousel-item,
+    .carousel-item img {
+        height: 400px;
+    }
+
+    .carousel-caption {
+        bottom: 18%;
+    }
+
+    .carousel-caption h1 {
+        font-size: 28px;
+    }
+
+    .carousel-caption p {
+        font-size: 15px;
+    }
+    .courses-section {
+        padding: 55px 0;
+    }
+
+    .section-title {
+        font-size: 28px;
+    }
+
+    .course-card {
+        padding: 25px 18px;
+    }
+
+}
+
+</style>
+
+<body>
+
+    <!-- NAVBAR -->
+    <nav class="navbar navbar-expand-lg custom-navbar sticky-top">
+        <div class="container">
+
+            <a class="navbar-brand" href="#home">
+                XYZ <span>Institute</span>
+            </a>
+
+            <button class="navbar-toggler" type="button"
+                data-bs-toggle="collapse"
+                data-bs-target="#navbarMenu"
+                aria-controls="navbarMenu"
+                aria-expanded="false"
+                aria-label="Toggle navigation">
+
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div class="collapse navbar-collapse" id="navbarMenu">
+
+                <ul class="navbar-nav ms-auto">
+
+                    <li class="nav-item">
+                        <a class="nav-link" href="index.html">Home</a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a class="nav-link" href="aboutus.html">About Us</a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a class="nav-link" href="courses.html">Courses</a>
+                    </li>
+
+                </ul>
+
+            </div>
+        </div>
+    </nav>
+
+<!-- COURSES SECTION -->
+
+<section class="courses-section" id="courses">
+
+    <div class="container">
+
+        <div class="text-center mb-5">
+            <h2 class="section-title">Our Popular Courses</h2>
+
+            <p class="section-description">
+                Explore our professional courses and develop the skills
+                needed to achieve your career goals.
+            </p>
+        </div>
+
+        <div class="row g-4">
+
+            <!-- COURSE 1 -->
+            <div class="col-lg-3 col-md-6">
+                <div class="course-card">
+                    <div class="course-icon">
+                        <i class="fa-solid fa-code"></i>
+                    </div>
+                    <h4>Web Development</h4>
+                    <p>Learn HTML, CSS, JavaScript and Bootstrap to create modern websites.</p>
+                    <a href="#" class="course-btn">Learn More</a>
+                </div>
+            </div>
+
+            <!-- COURSE 2 -->
+            <div class="col-lg-3 col-md-6">
+                <div class="course-card">
+                    <div class="course-icon">
+                        <i class="fa-brands fa-python"></i>
+                    </div>
+                    <h4>Python Programming</h4>
+                    <p>Learn Python programming, logic building and application development.</p>
+                    <a href="#" class="course-btn">Learn More</a>
+                </div>
+            </div>
+
+            <!-- COURSE 3 -->
+            <div class="col-lg-3 col-md-6">
+                <div class="course-card">
+                    <div class="course-icon">
+                        <i class="fa-solid fa-database"></i>
+                    </div>
+                    <h4>Data Science</h4>
+                    <p>Explore data analysis, visualization and machine learning concepts.</p>
+                    <a href="#" class="course-btn">Learn More</a>
+                </div>
+            </div>
+
+            <!-- COURSE 4 -->
+            <div class="col-lg-3 col-md-6">
+                <div class="course-card">
+                    <div class="course-icon">
+                        <i class="fa-solid fa-brain"></i>
+                    </div>
+                    <h4>Artificial Intelligence</h4>
+                    <p>Understand AI concepts, intelligent systems and modern applications.</p>
+                    <a href="#" class="course-btn">Learn More</a>
+                </div>
+            </div>
+
+            <!-- COURSE 5 -->
+            <div class="col-lg-3 col-md-6">
+                <div class="course-card">
+                    <div class="course-icon">
+                        <i class="fa-solid fa-chart-line"></i>
+                    </div>
+                    <h4>Digital Marketing</h4>
+                    <p>Learn SEO, social media marketing and online advertising strategies.</p>
+                    <a href="#" class="course-btn">Learn More</a>
+                </div>
+            </div>
+
+            <!-- COURSE 6 -->
+            <div class="col-lg-3 col-md-6">
+                <div class="course-card">
+                    <div class="course-icon">
+                        <i class="fa-solid fa-cloud"></i>
+                    </div>
+                    <h4>Cloud Computing</h4>
+                    <p>Explore cloud platforms, cloud storage and computing services.</p>
+                    <a href="#" class="course-btn">Learn More</a>
+                </div>
+            </div>
+
+            <!-- COURSE 7 -->
+            <div class="col-lg-3 col-md-6">
+                <div class="course-card">
+                    <div class="course-icon">
+                        <i class="fa-solid fa-shield-halved"></i>
+                    </div>
+                    <h4>Cyber Security</h4>
+                    <p>Learn network security, cyber threats and data protection techniques.</p>
+                    <a href="#" class="course-btn">Learn More</a>
+                </div>
+            </div>
+
+            <!-- COURSE 8 -->
+            <div class="col-lg-3 col-md-6">
+                <div class="course-card">
+                    <div class="course-icon">
+                        <i class="fa-solid fa-mobile-screen"></i>
+                    </div>
+                    <h4>App Development</h4>
+                    <p>Learn how to design and develop mobile applications.</p>
+                    <a href="#" class="course-btn">Learn More</a>
+                </div>
+            </div>
+
+            <!-- COURSE 9 -->
+            <div class="col-lg-3 col-md-6">
+                <div class="course-card">
+                    <div class="course-icon">
+                        <i class="fa-solid fa-server"></i>
+                    </div>
+                    <h4>Java Programming</h4>
+                    <p>Understand Java fundamentals, OOP concepts and application development.</p>
+                    <a href="#" class="course-btn">Learn More</a>
+                </div>
+            </div>
+
+            <!-- COURSE 10 -->
+            <div class="col-lg-3 col-md-6">
+                <div class="course-card">
+                    <div class="course-icon">
+                        <i class="fa-solid fa-chart-pie"></i>
+                    </div>
+                    <h4>Data Analytics</h4>
+                    <p>Learn to analyze data and create meaningful reports and insights.</p>
+                    <a href="#" class="course-btn">Learn More</a>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+</section>
+
+    
+    <!-- FOOTER -->
+    <footer class="footer">
+
+        <div class="container">
+
+            <div class="row g-4">
+
+                <div class="col-md-6">
+
+                    <h3>XYZ Institute</h3>
+
+                    <p>
+                        Learn today, lead tomorrow. Build your knowledge,
+                        develop your skills and create a brighter future
+                        with XYZ Institute.
+                    </p>
+
+                </div>
+
+                <div class="col-md-3">
+
+                    <h5>Quick Links</h5>
+
+                    <ul>
+                        <li><a href="#home">Home</a></li>
+                        <li><a href="#about">About Us</a></li>
+                        <li><a href="#courses">Courses</a></li>
+                    </ul>
+
+                </div>
+
+                <div class="col-md-3">
+
+                    <h5>Follow Us</h5>
+
+                    <div class="social-links">
+
+                        <a href="#" aria-label="Facebook">
+                            <i class="fa-brands fa-facebook"></i>
+                        </a>
+
+                        <a href="#" aria-label="Instagram">
+                            <i class="fa-brands fa-instagram"></i>
+                        </a>
+
+                        <a href="#" aria-label="LinkedIn">
+                            <i class="fa-brands fa-linkedin"></i>
+                        </a>
+
+                        <a href="#" aria-label="YouTube">
+                            <i class="fa-brands fa-youtube"></i>
+                        </a>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+            <hr>
+
+            <p class="copyright">
+                © 2026 XYZ Institute. All Rights Reserved.
+            </p>
+
+        </div>
+
+    </footer>
+
+</body>
+</html>
+
